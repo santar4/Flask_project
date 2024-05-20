@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+    <div id="menu">
+        <h1>Меню</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Назва піци</th>
+                <th>Опис інградієнтів</th>
+                <th>Ціна піци</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for dish in menu %}
+            <tr>
+                <td>{{ dish['назва'] }}</td>
+                <td>{{ dish['опис'] }}</td>
+                <td>{{ dish['ціна'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+
+</body>
+</html>>
