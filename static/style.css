@@ -9,41 +9,41 @@
 }
 
 #menu {
-    margin: 20px auto; /* Вирівнюємо таблицю по центру */
-    width: 80%; /* Задаємо ширину таблиці */
-    border-collapse: collapse; /* Згортання меж таблиці */
-    font-family: Arial, sans-serif; /* Задаємо шрифт тексту таблиці */
+    margin: 20px auto; 
+    width: 80%; 
+    border-collapse: collapse; 
+    font-family: Arial, sans-serif; 
 }
 
-/* Стилі для заголовків таблиці */
+ Стилі для заголовків таблиці 
 #menu th {
-    background-color: #f2f2f2; /* Колір фону заголовків */
-    color: #333; /* Колір тексту заголовків */
-    font-weight: bold; /* Жирний шрифт для заголовків */
-    padding: 10px; /* Відступи від тексту до меж заголовків */
-    text-align: left; /* Вирівнюємо текст по лівому краю */
-    border: 1px solid #ddd; /* Межі заголовків */
+    background-color: #f2f2f2; 
+    color: #333; 
+    font-weight: bold;
+    padding: 10px;
+    text-align: left; 
+    border: 1px solid #ddd; 
 }
 
-/* Стилі для рядків таблиці */
+ Стилі для рядків таблиці 
 #menu td {
-    padding: 10px; /* Відступи від тексту до меж рядків */
-    border: 1px solid #ddd; /* Межі рядків */
+    padding: 10px;
+    border: 1px solid #ddd; 
 }
 
-/* Стилі для альтернативних рядків таблиці (парні) */
+ Стилі для альтернативних рядків таблиці 
 #menu tr:nth-child(even) {
-    background-color: #f9f9f9; /* Колір фону альтернативних рядків */
+    background-color: #f9f9f9; 
 }
 
-/* Стилі для посилань */
+ Стилі для посилань 
 #menu a {
-    text-decoration: none; /* Вимикаємо підкреслення для посилань */
-    color: #337ab7; /* Колір посилань */
-    font-weight: bold; /* Жирний шрифт для посилань */
+    text-decoration: none; 
+    color: #337ab7; 
+    font-weight: bold; 
 }
 
-/* Стилі для посилань при наведенні */
+ Стилі для посилань при наведенні 
 #menu a:hover {
-    color: #23527c; /* Зміна коліру при наведенні курсора */
+    color: #23527c; 
 }}
