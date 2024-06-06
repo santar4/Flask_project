@@ -1,0 +1,12 @@
+<div>
+    <h1> Project {{ name }} </h1>
+    <h2> Time work - {{ time_work }} </h2>
+    <nav>
+        {% for menu_item in ['home'] %}
+            <a href={{url_for(menu_item)}}> {{menu_item|upper}} </a>
+        {% endfor %}
+    </nav>
+
+
+    <hr>
+</div>

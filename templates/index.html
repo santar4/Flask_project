@@ -3,19 +3,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>{{ title }}</title>
     <link rel="stylesheet" type="text/css" href="/static/style.css">
 </head>
+
+<header>
+    {% include "Components/_header.html" %}
+</header>
+
 <body>
+{% block content %}
     <div id="header">
         </ul>
-        <h1> Crave Pizza Corner </h1>
+        <h1> {{ title }} </h1>
         <img src="/static/image4.jpg" width="“250”" height="“250”">
-        <li><a href="http://localhost:5050/menu/" target="_blank" class="button">Меню</a></li>
+        <li><a href="http://localhost:5050/menu/" class="button">Меню</a></li>
     </ul>
     </div>
-
+    {% endblock %}
 
 </body>
-
+<footer>
+    {% include "components/_footer.html" %}
+</footer>
 </html>
