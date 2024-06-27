@@ -1,0 +1,37 @@
+#header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+#header img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+#pizzas {
+    width: 100%;
+    border-collapse: collapse;
+    margin-left: 10;
+    margin-right: 100;
+}
+
+#pizzas th, #pizzas td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#pizzas tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#pizzas tr:hover {
+    background-color: #ddd;
+}
+
+#pizzas th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}

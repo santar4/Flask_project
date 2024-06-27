@@ -34,7 +34,7 @@ def make_write_query(query, *args):
 
 def create_table():
     query = """
-    CREATE TABLE IF NOT EXISTS menu_page (
+    CREATE TABLE IF NOT EXISTS menu_table (
         id INTEGER PRIMARY KEY,
         name TEXT NOT NULL,
         description TEXT NOT NULL,
@@ -57,12 +57,12 @@ def insert_data(name, description, prize=None):
 
 
 def get_all():
-    query = """SELECT * FROM menu_page"""
+    query = """SELECT * FROM menu_table"""
     return make_write_query(query)
 
 
 def get_by_id(id):
-    query = """SELECT * FROM menu_page WHERE id = ?"""
+    query = """SELECT * FROM menu_table WHERE id = ?"""
     with sqlite3.connect(db_name) as conn:
         cursor = conn.cursor()
         cursor.execute(query, (id,))
@@ -78,7 +78,7 @@ def get_by_id(id):
 def update_data_table(name, description, prize=None):
     # join_date = datetime.datetime.now()
     update_query = ("""
-        UPDATE menu SET name = ?, description = ?, prize = ? 
+        UPDATE menu_table SET name = ?, description = ?, prize = ? 
         """)
 
     data_tuple = (name, description, prize,)
@@ -90,16 +90,16 @@ if __name__ == "__main__":
     # record = make_read_query(sqlite_select_query)
     # print("Версія бази данних SQlite", record)
     #     print(f"База данних {db_name} підключенна")
-    create_table()
-    menu_page = [
+    # create_table()
+    menu_table = [
         {"name": "Маргарита", "description": "Помідори, моцарела, базилік", "prize": 100},
         {"name": "Пепероні", "description": "Салямі, сир, томатний соус", "prize": 120},
         {"name": "Гавайська Літня", "description": "Куряче філе, ананаси, шинка", "prize": 130},
         {"name": "М'ясна", "description": "салямі, бекон, шинка, моцарела", "prize": 130},
         {"name": "Гавайська", "description": "перець, гриби, оливки, моцарела", "prize": 130}
     ]
-
-    # for d in menu_page:
+    #
+    # for d in menu_table:
     #     insert_data(**d)
 
-    pprint(get_all())
+    # pprint(get_all())
