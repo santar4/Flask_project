@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <h1>Create New Review</h1>
+
+    <form method="post">
+        <div class="form-control">
+            <label for="nickname"> Nickname </label>
+            <input type="text" name="nickname" id="nickname"  placeholder="" class="form-control"
+                   value="{{ request.form['title'] }}">
+        </div>
+        <div class="form-control">
+            <label for="feedback"> Feedback </label>
+            <textarea name="feedback" id="feedback"  placeholder="Feedback" class="form-control">
+                {{ request.form['title'] }}
+            </textarea>
+        </div>
+
+
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+
+    <div class="container">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <div class ="flashes">
+                {% for message in messages %}
+                    {{ message }}
+                {% endfor %}
+            </div>
+            {% endif %}
+        {% endwith %}
+    </div>
+
+
+</div>
+
+{% endblock %}

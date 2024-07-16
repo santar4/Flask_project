@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+<head>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+
+{% block content %}
+    <div id="reviews">
+        <h1>Відгуки</h1>
+        {% if reviews %}
+    <table>
+        <thead>
+            <tr>
+                <th>Ім'я</th>
+                <th>Відгук</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for review in reviews %}
+            <tr>
+                <td>{{ review.nickname }}</td>
+                <td>{{ review.feedback }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+        {% endif %}
+    </div>
+
+{% endblock %}
