@@ -3,7 +3,6 @@ from wtforms import StringField, SubmitField, validators, PasswordField
 
 
 class FeedbackForm(FlaskForm):
-    nickname = StringField("Nickname", validators=[validators.DataRequired()])
     feedback = StringField("feedback", validators=[validators.DataRequired()])
 
 

@@ -1,7 +1,7 @@
 from typing import List
 from datetime import datetime
 
-from sqlalchemy import DateTime, ForeignKey
+from sqlalchemy import DateTime, ForeignKey, Column, Integer
 
 from app import dB
 from sqlalchemy import String
@@ -28,9 +28,9 @@ class Feedback(dB.Model):
     nickname: Mapped[str] = mapped_column(String(50))
     feedback: Mapped[str] = mapped_column(String(100))
 
-    # user_id = mapped_column(ForeignKey("users.id"))
+    user_id = Column(Integer, ForeignKey('users.id'))
 
-    # user: Mapped["User"] = relationship(back_populates='reviews')
+    user = relationship("User", back_populates="reviews")
 
     def __str__(self):
         return f"Review {self.id}: {self.feedback}"
@@ -44,7 +44,7 @@ class User(UserMixin, dB.Model):
     email: Mapped[str] = mapped_column(String(50), unique=True)
     password: Mapped[str] = mapped_column(String(50))
 
-    # reviews: Mapped[List["Feedback"]] = relationship(back_populates='user')
+    reviews = relationship("Feedback", back_populates="user")
 
     def __repr__(self):
         return f"User: {self.nickname}"
